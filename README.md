@@ -6,13 +6,13 @@ Project Integration
 The descriptions below include details and elaboration from the Quick Start section above.
 Download vlc-android-sdk as a zip file and extract it. Copy the veloceeSDK.aar (optional: veloceeSDK_UI.aar - see InstantRadio section) folder to the project libs folder
 
-add the following permissions to your AndroidManifest.xml file
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+Add to the application gradle file in the dependency section:
+dependencies { compile (name:'veloceeSDK', ext:'aar') }
+repositories {
+    flatDir { dirs 'libs' }
+}
 
-add Velocee's service definition:
-	<service android:name="com.velocee.sdk.VeloceeSDKService" />
+optional link against veloceeSDK_UI.aar as well in the same manner
 
 The SDK uses the following third party libraries 
 GSON
@@ -23,6 +23,16 @@ OkHTTP
 http://square.github.io/okhttp/
 Retrofit
 http://square.github.io/retrofit/
+
+Add dependencies to your application gradle file:
+dependencies {
+	compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.google.code.gson:gson:2.3'
+    compile 'com.google.android.gms:play-services-location:8.1.0'
+    compile 'com.squareup.retrofit:retrofit:1.9.0'
+    compile 'com.squareup.okio:okio:1.4.0'
+    compile 'com.squareup.okhttp:okhttp:2.4.0'
+}
 
 Code Integration
 ----------------
@@ -57,25 +67,12 @@ InstantRadio Integration
 ------------------
 The Velocee InstantRadio module plays user adapted audio content to the user.
 In order to use the prebuilt InstantRadio UI player in conjunction with InstantRadio module copy veloceeSDK_UI.aar library to the libs folder of your project
-Add an activity denifition as follows:
-<activity
-    android:name="com.velocee.sdk.ui.VlcPlayerActivity"
-    android:screenOrientation="portrait" 
-    android:theme="@style/VlcDarkTheme">
-</activity>
+
 
 In order to be notified when a new playlist is dowloaded (so it may be played), call registerPlaybackEvents(IPlaybackEvents rcv)
 supplying an instance implementing OnPlaylistLoaded(List<String> trackNames)
 
 When the event fires, play() may be called in order for the playlist to start playing sequentially
-
-inorder to allow control of the media player with external devices (like wireless headset / other bluetooth device)
-add the following to the main manifest.xml within the <application> tag
-<receiver android:name="com.velocee.sdk.VlcMediaController">
-    <intent-filter>
-        <action android:name="android.intent.action.MEDIA_BUTTON" />
-    </intent-filter>
-</receiver>
 
 Interfaces
 ----------
