@@ -11,7 +11,7 @@ Velocee SDK is available on our Maven repository
 To use it just add the following to your build.gradle file.
 
     repositories {
-    mavenCentral()
+        mavenCentral()
         maven {
             url "https://s3.amazonaws.com/velocee-maven"
         }
@@ -20,8 +20,8 @@ To use it just add the following to your build.gradle file.
     dependencies {
         compile fileTree(dir: 'libs', include: ['*.jar'])
         compile 'com.android.support:appcompat-v7:23.4.0'
-        compile 'com.velocee:veloceeSDK:0.2.3'
-        compile 'com.velocee:audioplayer:0.2.5'
+        compile 'com.velocee:veloceeSDK:1.2.0'
+        compile 'com.velocee:audioplayer:1.2.0'
     }
 
 
@@ -34,8 +34,8 @@ Copy the veloceeSDK.aar and veloceeSDK_Audioplayer.aar to the project libs folde
 Add to the application gradle file in the dependency section:
 
     dependencies { 
-    	compile (name:'veloceeSDK', ext:'aar')
-    	compile (name:'veloceeSDK_Audioplayer', ext:'aar')
+        compile (name:'veloceeSDK', ext:'aar')
+        compile (name:'veloceeSDK_Audioplayer', ext:'aar')
     }
     repositories {
         flatDir { dirs 'libs' }
