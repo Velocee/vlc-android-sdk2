@@ -20,8 +20,8 @@ To use it just add the following to your build.gradle file.
     dependencies {
         compile fileTree(dir: 'libs', include: ['*.jar'])
         compile 'com.android.support:appcompat-v7:23.4.0'
-        compile 'com.velocee:veloceeSDK:1.2.0'
-        compile 'com.velocee:audioplayer:1.2.0'
+        compile 'com.velocee:veloceeSDK:2.1.0'
+        compile 'com.velocee:audioplayer:2.1.0'
     }
 
 
