@@ -20,11 +20,18 @@ To use it just add the following to your build.gradle file.
     dependencies {
         compile fileTree(dir: 'libs', include: ['*.jar'])
         compile 'com.android.support:appcompat-v7:23.4.0'
-        compile 'com.velocee:veloceeSDK:2.1.0'
-        compile 'com.velocee:audioplayer:2.1.0'
+        compile 'com.velocee:veloceeSDK:2.1.1'
+        compile 'com.velocee:audioplayer:2.1.1'
     }
 
+In some cases you might see some lint errors caused by 3rd party libs.
+To ignore them you can add the following to the end of the android {} section in the build.gradle file.
 
+    android { ...
+    lintOptions { 
+            abortOnError false
+        } 
+    }
 
 ###2. Zip Download Project Integration
 
@@ -211,4 +218,6 @@ is similar to the above but receives and returns a URL instead of string. Both m
     Bitmap getCachedResourceData(String originalUrl)
 
 the URL (as string) and returns an image bitmap info in case the resource can be found in cache, null otherwise
+
+
 
