@@ -20,8 +20,8 @@ To use it just add the following to your build.gradle file.
     dependencies {
         compile fileTree(dir: 'libs', include: ['*.jar'])
         compile 'com.android.support:appcompat-v7:23.4.0'
-        compile 'com.velocee:veloceeSDK:2.1.2'
-        compile 'com.velocee:audioplayer:2.1.2'
+        compile 'com.velocee:veloceeSDK:2.1.3'
+        compile 'com.velocee:audioplayer:2.1.3'
     }
 
 In some cases you might see some lint errors caused by 3rd party libs.
