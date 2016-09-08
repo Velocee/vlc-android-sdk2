@@ -19,9 +19,9 @@ To use it just add the following to your build.gradle file.
 
     dependencies {
         compile fileTree(dir: 'libs', include: ['*.jar'])
-        compile 'com.android.support:appcompat-v7:23.4.0'
-        compile 'com.velocee:veloceeSDK:2.1.3'
-        compile 'com.velocee:audioplayer:2.1.3'
+        compile 'com.android.support:appcompat-v7:+'
+        compile 'com.velocee:veloceeSDK:2.1.4'
+        compile 'com.velocee:audioplayer:2.1.4'
     }
 
 In some cases you might see some lint errors caused by 3rd party libs.
@@ -66,9 +66,8 @@ http://www.adswizz.com
 
     Add dependencies to your application gradle file:
     dependencies {
-        compile 'com.android.support:appcompat-v7:23.4.0’
+        compile 'com.android.support:appcompat-v7:+’
         compile 'com.google.code.gson:gson:2.3'
-        compile 'com.google.android.gms:play-services-location:9.2.1'
         compile 'com.squareup.retrofit:retrofit:1.9.0'
         compile 'com.squareup.okio:okio:1.4.0'
         compile 'com.squareup.okhttp:okhttp:2.4.0'
