@@ -20,8 +20,8 @@ To use it just add the following to your build.gradle file.
     dependencies {
         compile fileTree(dir: 'libs', include: ['*.jar'])
         compile 'com.android.support:appcompat-v7:+'
-        compile 'com.velocee:veloceeSDK:2.1.5'
-        compile 'com.velocee:audioplayer:2.1.5'
+        compile 'com.velocee:veloceeSDK:2.1.6'
+        compile 'com.velocee:audioplayer:2.1.6'
     }
 
 In some cases you might see some lint errors caused by 3rd party libs.
@@ -61,8 +61,6 @@ Retrofit
 http://square.github.io/retrofit/
 Apache Commons Lang
 https://commons.apache.org/proper/commons-lang/
-AdsWiz SDK
-http://www.adswizz.com
 
     Add dependencies to your application gradle file:
     dependencies {
@@ -72,7 +70,6 @@ http://www.adswizz.com
         compile 'com.squareup.okio:okio:1.4.0'
         compile 'com.squareup.okhttp:okhttp:2.4.0'
         compile 'org.apache.commons:commons-lang3:3.4'
-        compile files('libs/adswizz-sdk.jar')
     }
 
 ##Code Integration
